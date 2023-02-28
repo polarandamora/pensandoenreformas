@@ -1,9 +1,6 @@
-*{
-    margin:0;
-    padding:0;
-}
-
-body {
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -29,7 +26,7 @@ body {
     left: 15px;
     bottom: -2px;
     font-weight: bolder;
-    color: antiquewhite;
+    color: #f19100;
 }
 
 #introduction {
@@ -53,25 +50,52 @@ body {
     min-height: 400px;
     background-color: #303030;
     color: antiquewhite;
+    padding-bottom: 50px;
 }
 
-.card-group {
+.card-20 {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .card {
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 250px;
-    border: none;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+    margin:10px 0px;
+}
+
+@media(max-width: 500px) {
+    .card {
+        max-width: 100%;
+
+
+    }
+}
+
+@media(min-width: 850px) {
+    .card {
+        max-width: 350px;
+
+
+    }
+}
+@media(max-height: 500px) {
+    .card {
+        width: 570px;
+
+
+    }
 }
 
 .carousel-indicators [data-bs-target] {
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border-radius: 100%;
 }
 
@@ -85,6 +109,7 @@ body {
 
 #ubi {
     display: flex;
+    flex-flow: row nowrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -180,13 +205,7 @@ a:hover div:last-child {
 }
 
 /*MediaQuerys*/
-@media only screen and (max-width: 600px) {
-    .card-group {
-        display: grid;
-    }
-}
-
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     iframe {
         width: auto;
         height: auto;
